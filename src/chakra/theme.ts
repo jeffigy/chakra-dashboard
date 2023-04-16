@@ -22,6 +22,7 @@ export const theme = extendTheme({
     global: () => ({
       body: {
         bg: "brand.100",
+        color: "brand.600",
       },
     }),
   },

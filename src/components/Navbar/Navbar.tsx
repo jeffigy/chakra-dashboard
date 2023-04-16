@@ -1,5 +1,8 @@
 import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
+import PageTitle from "./PageTitle";
+import SearchBar from "./SearchBar";
+import RightButtons from "./RightButtons";
 
 export default function Navbar() {
   return (
@@ -13,7 +16,9 @@ export default function Navbar() {
       alignItems={"center"}
       justifyContent={"space-between"}
     >
-      <Text>Statistics</Text>
+      <PageTitle />
+      <SearchBar />
+      <RightButtons />
     </Flex>
   );
 }

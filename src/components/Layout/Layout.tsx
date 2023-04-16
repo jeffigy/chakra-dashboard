@@ -10,9 +10,6 @@ export default function Layout() {
     <Box minH={"100vh"}>
       <Sidebar />
       <Navbar />
-      <Flex ml={{ base: 0, md: 60 }} p={"5s"}>
-        <main>body component</main>
-      </Flex>
     </Box>
   );
 }
