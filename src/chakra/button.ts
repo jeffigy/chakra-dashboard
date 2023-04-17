@@ -9,22 +9,21 @@ export const Button: ComponentStyleConfig = {
     },
   },
   variants: {
-    primarySolid: {
+    solid: {
       color: "brand.100",
-      bg: "brand.300",
+      bg: "brand.200",
       _hover: {
-        bg: "brand.700",
+        bg: "brand.300",
+        color: "brand.200",
       },
     },
-    primaryOutline: {
+    outline: {
       border: "1px solid",
-      borderColor: "brand.300",
-      color: "brand.300",
-    },
-    secondaryOutline: {
-      border: "1px solid",
-      borderColor: "brand.600",
-      color: "brand.600",
+      borderColor: "brand.200",
+      color: "brand.200",
+      _hover: {
+        bg: "brand.100",
+      },
     },
   },
 };

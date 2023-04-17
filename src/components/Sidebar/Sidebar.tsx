@@ -30,7 +30,7 @@ function Sidebar({ onClose, title, display }: SidebarProps) {
         alignItems={"center"}
         justifyContent={"space-between"}
       >
-        <Text color={"white"}>{title}</Text>
+        <Text>{title}</Text>
         <CloseButton
           display={{ base: "flex", md: "none" }}
           border={"1px solid"}

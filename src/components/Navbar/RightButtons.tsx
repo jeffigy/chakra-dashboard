@@ -15,20 +15,20 @@ export default function RightButtons() {
         mr={"15px"}
         display={{ base: "none", lg: "block" }}
         size={"md"}
-        variant={"primarySolid"}
+        variant={"solid"}
       >
         Upgrade
       </Button>
       <IconButton
         mr={"15px"}
-        variant={"secondaryOutline"}
+        variant={"outline"}
         aria-label="Notification"
         icon={<BellIcon />}
       />
       <IconButton
         aria-label="color-mode"
-        variant={"primaryOutline"}
-        icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
+        variant={"outline"}
+        icon={useColorModeValue(<SunIcon />, <MoonIcon />)}
         onClick={toggleColorMode}
       />
     </Flex>

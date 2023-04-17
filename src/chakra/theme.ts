@@ -16,13 +16,17 @@ export const theme = extendTheme({
   config,
   colors: {
     brand: {
-      100: "#242529 ", // background color
-      200: "#DCDCDC", //light grey
-      300: "#FFF379", // primary color
-      400: "#AEAAA9",
-      500: "#35353D", // dark grey
-      600: "#FBEADC",
-      700: "#fff7a1", // hover color
+      // 100: "#242529 ", // background color
+      // 200: "#DCDCDC", //light grey
+      // 300: "#FFF379", // primary color
+      // 400: "#AEAAA9",
+      // 500: "#35353D", // dark grey
+      // 600: "#FBEADC",
+      // 700: "#fff7a1", // hover color
+      100: "#2E424D",
+      200: "#5B8291",
+      300: "#98DAD9",
+      400: "#EAEBED",
     },
   },
   fonts: {
@@ -31,8 +35,8 @@ export const theme = extendTheme({
   styles: {
     global: () => ({
       body: {
-        bg: useColorModeValue("brand.100", "white"),
-        color: useColorModeValue("white", "black"),
+        bg: useColorModeValue("brand.400", "brand.100"),
+        color: useColorModeValue("black", "white"),
       },
     }),
   },
