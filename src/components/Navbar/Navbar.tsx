@@ -1,10 +1,16 @@
-import { Flex, Text } from "@chakra-ui/react";
-import React from "react";
+import { Flex, IconButton, MenuButton, Text } from "@chakra-ui/react";
 import PageTitle from "./PageTitle";
 import SearchBar from "./SearchBar";
 import RightButtons from "./RightButtons";
+import { HamburgerIcon } from "@chakra-ui/icons";
+import DrawerButton from "./DrawerButton";
 
-export default function Navbar() {
+type NavbarProps = {
+  ref: any;
+  onClick: () => void;
+  title: string;
+};
+export default function Navbar({ ref, onClick, title }: NavbarProps) {
   return (
     <Flex
       ml={{ base: 0, md: 60 }}
@@ -16,7 +22,8 @@ export default function Navbar() {
       alignItems={"center"}
       justifyContent={"space-between"}
     >
-      <PageTitle />
+      <DrawerButton ref={ref} onClick={onClick} />
+      <PageTitle title={title} />
       <SearchBar />
       <RightButtons />
     </Flex>

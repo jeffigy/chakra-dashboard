@@ -1,6 +1,8 @@
 import { Text } from "@chakra-ui/react";
 import React from "react";
-
-export default function PageTitle() {
-  return <Text fontSize={"25px"}>Name here</Text>;
+type PageTitleProps = {
+  title: string;
+};
+export default function PageTitle({ title }: PageTitleProps) {
+  return <Text fontSize={"25px"}>{title}</Text>;
 }

@@ -1,7 +1,5 @@
-import { SettingsIcon } from "@chakra-ui/icons";
 import { Flex, Icon, Text } from "@chakra-ui/react";
-import React from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 type NavlinksProps = {
   name: string;
   icon: any;
