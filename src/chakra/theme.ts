@@ -1,9 +1,19 @@
-import { extendTheme } from "@chakra-ui/react";
+import {
+  extendTheme,
+  useColorModeValue,
+  type ThemeConfig,
+} from "@chakra-ui/react";
 import "@fontsource/inter/300.css";
 import "@fontsource/inter/400.css";
 import { Button } from "./button";
 
+const config: ThemeConfig = {
+  initialColorMode: "light",
+  useSystemColorMode: false,
+};
+
 export const theme = extendTheme({
+  config,
   colors: {
     brand: {
       100: "#242529 ", // background color
@@ -21,8 +31,8 @@ export const theme = extendTheme({
   styles: {
     global: () => ({
       body: {
-        bg: "brand.100",
-        color: "brand.600",
+        bg: useColorModeValue("brand.100", "white"),
+        color: useColorModeValue("white", "black"),
       },
     }),
   },

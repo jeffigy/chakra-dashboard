@@ -4,13 +4,9 @@ import {
   DrawerCloseButton,
   DrawerContent,
   DrawerOverlay,
-  Fade,
   Flex,
-  ScaleFade,
-  Slide,
   useBreakpointValue,
   useDisclosure,
-  useMediaQuery,
 } from "@chakra-ui/react";
 import Navbar from "components/Navbar/Navbar";
 import Sidebar from "components/Sidebar/Sidebar";

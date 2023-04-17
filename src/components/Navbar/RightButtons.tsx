@@ -1,7 +1,14 @@
-import { BellIcon } from "@chakra-ui/icons";
-import { Button, Flex, IconButton } from "@chakra-ui/react";
+import { BellIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import {
+  Button,
+  Flex,
+  IconButton,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 export default function RightButtons() {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex>
       <Button
@@ -13,9 +20,16 @@ export default function RightButtons() {
         Upgrade
       </Button>
       <IconButton
+        mr={"15px"}
         variant={"secondaryOutline"}
         aria-label="Notification"
         icon={<BellIcon />}
+      />
+      <IconButton
+        aria-label="color-mode"
+        variant={"primaryOutline"}
+        icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
+        onClick={toggleColorMode}
       />
     </Flex>
   );
