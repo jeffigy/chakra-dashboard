@@ -1,10 +1,7 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
-import React from "react";
 import ProfileAvatar from "./ProfileAvatar";
 import Navlinks from "./Navlink";
 import { CalendarIcon, ChatIcon, SettingsIcon } from "@chakra-ui/icons";
-
-type SidebarProps = {};
 
 const NavItems = [
   { name: "Schedule", icon: CalendarIcon, to: "/schedules" },
@@ -12,7 +9,7 @@ const NavItems = [
   { name: "Settings", icon: SettingsIcon, to: "/settings" },
 ];
 
-const Sidebar: React.FC<SidebarProps> = () => {
+function Sidebar() {
   return (
     <Box
       borderRight={"1px"}
@@ -37,5 +34,6 @@ const Sidebar: React.FC<SidebarProps> = () => {
       ))}
     </Box>
   );
-};
+}
+
 export default Sidebar;

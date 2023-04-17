@@ -1,9 +1,6 @@
 import { Avatar, Button, Flex, Text } from "@chakra-ui/react";
-import React from "react";
 
-type ProfileAvatarProps = {};
-
-const ProfileAvatar: React.FC<ProfileAvatarProps> = () => {
+function ProfileAvatar() {
   return (
     <Flex
       direction={"column"}
@@ -20,5 +17,6 @@ const ProfileAvatar: React.FC<ProfileAvatarProps> = () => {
       </Button>
     </Flex>
   );
-};
+}
+
 export default ProfileAvatar;
