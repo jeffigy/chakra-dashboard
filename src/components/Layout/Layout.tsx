@@ -5,11 +5,14 @@ import React from "react";
 type LayoutProps = {
   children: React.ReactNode;
 };
-export default function Layout() {
+export default function Layout({ children }: LayoutProps) {
   return (
     <Box minH={"100vh"}>
       <Sidebar />
       <Navbar />
+      <Flex ml={{ base: 0, md: 60 }} p={"20px"}>
+        <main>{children}</main>
+      </Flex>
     </Box>
   );
 }

@@ -7,8 +7,8 @@ import { CalendarIcon, ChatIcon, SettingsIcon } from "@chakra-ui/icons";
 type SidebarProps = {};
 
 const NavItems = [
-  { name: "Schedule", icon: CalendarIcon, to: "/schedule" },
-  { name: "Chat", icon: ChatIcon, to: "/chat" },
+  { name: "Schedule", icon: CalendarIcon, to: "/schedules" },
+  { name: "Chat", icon: ChatIcon, to: "/chats" },
   { name: "Settings", icon: SettingsIcon, to: "/settings" },
 ];
 
