@@ -19,7 +19,7 @@ function Sidebar({ onClose, title, display }: SidebarProps) {
     <Box
       // bg={"brand.200"}
       borderRight={"1px"}
-      borderRightColor={"gray.700"}
+      borderRightColor={"gray.400"}
       h={"full"}
       w={{ base: "full", md: 60 }}
       pos={"fixed"}
