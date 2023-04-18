@@ -1,4 +1,10 @@
-import { Flex, Icon, Text } from "@chakra-ui/react";
+import {
+  Flex,
+  Icon,
+  Text,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { NavLink, useLocation } from "react-router-dom";
 type NavlinksProps = {
   name: string;
@@ -12,26 +18,21 @@ export default function Navlink({ name, icon, to, ...rest }: NavlinksProps) {
   return (
     <NavLink to={to}>
       <Flex
-        color={"brand.600"}
+        color={useColorModeValue("black", "white")}
+        bg={isActive ? "brand.tealGradient" : "transparent"}
         align={"center"}
         p={"15px"}
         mx={"30px"}
         borderRadius={"lg"}
-        bg={isActive ? "gray.500" : "transparent"}
         _hover={{
           boxShadow: "none",
-          bg: "gray.500",
+          bg: "brand.teal1",
+          textDecoration: "none",
+          fontWeight: "normal",
         }}
-        {...rest}
       >
         {icon && <Icon as={icon} mr={"15px"} />}
-        <Text
-          _hover={{
-            textDecoration: "none",
-          }}
-        >
-          {name}
-        </Text>
+        <Text>{name}</Text>
       </Flex>
     </NavLink>
   );

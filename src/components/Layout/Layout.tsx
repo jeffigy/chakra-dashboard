@@ -11,11 +11,11 @@ import {
 import Navbar from "components/Navbar/Navbar";
 import Sidebar from "components/Sidebar/Sidebar";
 import React, { useEffect } from "react";
+import { appTitle } from "../../../config";
 type LayoutProps = {
   children: React.ReactNode;
 };
 export default function Layout({ children }: LayoutProps) {
-  const title = "Chakra Dashboard";
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
@@ -33,7 +33,7 @@ export default function Layout({ children }: LayoutProps) {
     <Box minH={"100vh"}>
       <Sidebar
         onClose={() => onClose}
-        title={title}
+        title={appTitle}
         display={{ base: "none", md: "block" }}
       />
 
@@ -48,11 +48,11 @@ export default function Layout({ children }: LayoutProps) {
       >
         <DrawerOverlay />
         <DrawerContent bg="brand.100">
-          <Sidebar onClose={onClose} title={title} />
+          <Sidebar onClose={onClose} title={appTitle} />
         </DrawerContent>
       </Drawer>
 
-      <Navbar ref={btnRef} onClick={onOpen} title={title} />
+      <Navbar btnRef={btnRef} onClick={onOpen} title={appTitle} />
 
       <Flex ml={{ base: 0, md: 60 }} p={"20px"}>
         <main>{children}</main>

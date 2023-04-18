@@ -27,6 +27,10 @@ export const theme = extendTheme({
       200: "#5B8291",
       300: "#98DAD9",
       400: "#EAEBED",
+      tealGradient:
+        "linear-gradient(158deg, rgba(12,205,163,1) 0%, rgba(193,252,211,1) 100%)",
+      teal1: "#0ccda3",
+      teal2: "#c1fcd3",
     },
   },
   fonts: {

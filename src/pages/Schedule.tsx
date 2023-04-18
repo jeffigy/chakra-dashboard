@@ -4,7 +4,7 @@ import Layout from "components/Layout/Layout";
 function Schedule() {
   return (
     <Layout>
-      <Card>
+      <Card bg={"brand.tealGradient"}>
         <CardBody>Schedule</CardBody>
       </Card>
     </Layout>

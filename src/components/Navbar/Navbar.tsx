@@ -6,11 +6,11 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import DrawerButton from "./DrawerButton";
 
 type NavbarProps = {
-  ref: any;
+  btnRef: any;
   onClick: () => void;
   title: string;
 };
-export default function Navbar({ ref, onClick, title }: NavbarProps) {
+export default function Navbar({ btnRef, onClick, title }: NavbarProps) {
   return (
     <Flex
       ml={{ base: 0, md: 60 }}
@@ -22,7 +22,7 @@ export default function Navbar({ ref, onClick, title }: NavbarProps) {
       alignItems={"center"}
       justifyContent={"space-between"}
     >
-      <DrawerButton ref={ref} onClick={onClick} />
+      <DrawerButton btnRef={btnRef} onClick={onClick} />
       <PageTitle title={title} />
       <SearchBar />
       <RightButtons />

@@ -1,15 +1,15 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { IconButton } from "@chakra-ui/react";
 type DrawerButtonProps = {
-  ref: any;
+  btnRef: React.RefObject<HTMLButtonElement>;
   onClick: () => void;
 };
 
-function DrawerButton({ ref, onClick }: DrawerButtonProps) {
+function DrawerButton({ btnRef, onClick }: DrawerButtonProps) {
   return (
     <IconButton
       display={{ base: "block", md: "none" }}
-      ref={ref}
+      ref={btnRef}
       onClick={onClick}
       icon={<HamburgerIcon />}
       aria-label={"menu"}

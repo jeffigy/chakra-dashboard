@@ -8,7 +8,7 @@ function AppRouter() {
   return (
     <Router>
       <Routes>
-        <Route path="/schedules" element={<Schedule />} />
+        <Route path="/" element={<Schedule />} />
         <Route path="/chats" element={<Chat />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<PageNotFound />} />

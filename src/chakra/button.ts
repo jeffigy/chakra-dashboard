@@ -1,4 +1,4 @@
-import { ComponentStyleConfig } from "@chakra-ui/react";
+import { ComponentStyleConfig, useColorModeValue } from "@chakra-ui/react";
 
 export const Button: ComponentStyleConfig = {
   baseStyle: {
@@ -10,19 +10,17 @@ export const Button: ComponentStyleConfig = {
   },
   variants: {
     solid: {
-      color: "brand.100",
-      bg: "brand.200",
+      bg: "brand.teal1",
       _hover: {
-        bg: "brand.300",
-        color: "brand.200",
+        bg: "brand.teal2",
       },
     },
     outline: {
       border: "1px solid",
-      borderColor: "brand.200",
-      color: "brand.200",
+      borderColor: "brand.teal1",
+      color: "brand.teal1",
       _hover: {
-        bg: "brand.100",
+        bg: "brand.teal2",
       },
     },
   },

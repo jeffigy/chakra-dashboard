@@ -4,7 +4,7 @@ import Navlinks from "./Navlink";
 import { CalendarIcon, ChatIcon, SettingsIcon } from "@chakra-ui/icons";
 
 const NavItems = [
-  { name: "Schedule", icon: CalendarIcon, to: "/schedules" },
+  { name: "Schedule", icon: CalendarIcon, to: "/" },
   { name: "Chat", icon: ChatIcon, to: "/chats" },
   { name: "Settings", icon: SettingsIcon, to: "/settings" },
 ];
@@ -17,6 +17,7 @@ type SidebarProps = {
 function Sidebar({ onClose, title, display }: SidebarProps) {
   return (
     <Box
+      // bg={"brand.200"}
       borderRight={"1px"}
       borderRightColor={"gray.700"}
       h={"full"}
