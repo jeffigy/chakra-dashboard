@@ -1,5 +1,11 @@
 import { SearchIcon } from "@chakra-ui/icons";
-import { Flex, Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import {
+  Flex,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 export default function SearchBar() {
   return (
@@ -15,9 +21,9 @@ export default function SearchBar() {
           variant={"outline"}
           placeholder="Seach something..."
           border={"none"}
-          color={"brand.600"}
-          _placeholder={{ color: "gray.600" }}
-          focusBorderColor="brand.600"
+          color={useColorModeValue("black", "white")}
+          // _placeholder={ useColorModeValue("gray.400", "gray.600")}
+          focusBorderColor={useColorModeValue("black", "white")}
         />
       </InputGroup>
     </Flex>
