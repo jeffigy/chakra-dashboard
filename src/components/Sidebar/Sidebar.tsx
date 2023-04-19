@@ -1,4 +1,4 @@
-import { Box, CloseButton, Flex, Text } from "@chakra-ui/react";
+import { Box, CloseButton, Flex, Spacer, Text } from "@chakra-ui/react";
 import ProfileAvatar from "./ProfileAvatar";
 import Navlinks from "./Navlink";
 import { CalendarIcon, ChatIcon, SettingsIcon } from "@chakra-ui/icons";
@@ -17,7 +17,6 @@ type SidebarProps = {
 function Sidebar({ onClose, title, display }: SidebarProps) {
   return (
     <Box
-      // bg={"brand.200"}
       borderRight={"1px"}
       borderRightColor={"gray.400"}
       h={"full"}
@@ -29,7 +28,7 @@ function Sidebar({ onClose, title, display }: SidebarProps) {
         h={"80px"}
         mx={8}
         alignItems={"center"}
-        justifyContent={"space-between"}
+        justifyContent={{ base: "space-between", md: "center" }}
       >
         <Text>{title}</Text>
         <CloseButton
