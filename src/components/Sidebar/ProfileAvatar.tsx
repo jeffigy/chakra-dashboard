@@ -10,7 +10,7 @@ function ProfileAvatar() {
     >
       <Avatar size={"xl"} mb={"10px"} name="user" />
       <Text mb={"10px"}>Louis Carter</Text>
-      <Button size={"xs"} variant={"secondaryOutline"}>
+      <Button size={"xs"} variant={"outline"}>
         Edit
       </Button>
     </Flex>

@@ -1,7 +1,6 @@
 import {
   Box,
   Drawer,
-  DrawerCloseButton,
   DrawerContent,
   DrawerOverlay,
   Flex,
@@ -30,7 +29,7 @@ export default function Layout({ children }: LayoutProps) {
   }, [isMobile, isOpen, onClose]);
 
   return (
-    <Box minH={"100vh"}>
+    <Flex flexDirection={"column"} minH={"100vh"}>
       <Sidebar
         onClose={() => onClose}
         title={appTitle}
@@ -54,9 +53,14 @@ export default function Layout({ children }: LayoutProps) {
 
       <Navbar btnRef={btnRef} onClick={onOpen} title={appTitle} />
 
-      <Flex ml={{ base: 0, md: 60 }} p={"20px"}>
-        <main>{children}</main>
+      <Flex
+        flex={1}
+        flexDirection={"column"}
+        ml={{ base: 0, md: 60 }}
+        p={"20px"}
+      >
+        {children}
       </Flex>
-    </Box>
+    </Flex>
   );
 }

@@ -1,4 +1,10 @@
-import { Flex, IconButton, MenuButton, Text } from "@chakra-ui/react";
+import {
+  Flex,
+  IconButton,
+  MenuButton,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import PageTitle from "./PageTitle";
 import SearchBar from "./SearchBar";
 import RightButtons from "./RightButtons";
@@ -21,6 +27,7 @@ export default function Navbar({ btnRef, onClick, title }: NavbarProps) {
       zIndex={"1"}
       alignItems={"center"}
       justifyContent={"space-between"}
+      bg={useColorModeValue("brand.400", "brand.100")}
     >
       <DrawerButton btnRef={btnRef} onClick={onClick} />
       <PageTitle title={title} />

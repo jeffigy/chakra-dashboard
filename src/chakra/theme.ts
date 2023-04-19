@@ -6,7 +6,6 @@ import {
 import "@fontsource/inter/300.css";
 import "@fontsource/inter/400.css";
 import { Button } from "./button";
-
 const config: ThemeConfig = {
   initialColorMode: "light",
   useSystemColorMode: false,
