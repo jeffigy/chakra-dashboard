@@ -19,7 +19,9 @@ const FormikControl: FC<FormikControlProps> = ({ control, ...rest }) => {
     case "textarea":
       return <TextArea label={""} name={""} placeholder={""} {...rest} />;
     case "select":
-      return <Select label={""} name={""} placeholder={""} options={[]} />;
+      return (
+        <Select label={""} name={""} placeholder={""} options={[]} {...rest} />
+      );
     case "radio":
       return <Radio />;
     case "checkbox":
