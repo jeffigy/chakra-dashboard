@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import Input from "./FormInputs/Input";
 import TextArea from "./FormInputs/TextArea";
 import Select from "./FormInputs/Select";
-import Radio from "./FormInputs/Radio";
+import RadioButton from "./FormInputs/RadioButton";
 import Checkbox from "./FormInputs/Checkbox";
 import DatePicker from "./FormInputs/DatePicker";
 interface FormikControlProps {
@@ -23,11 +23,11 @@ const FormikControl: FC<FormikControlProps> = ({ control, ...rest }) => {
         <Select label={""} name={""} placeholder={""} options={[]} {...rest} />
       );
     case "radio":
-      return <Radio />;
+      return <RadioButton label={""} name={""} options={[]} {...rest} />;
     case "checkbox":
-      return <Checkbox />;
+      return <Checkbox label={""} name={""} options={[]} {...rest} />;
     case "date":
-      return <DatePicker />;
+      return <DatePicker label={""} name={""} {...rest} />;
     default:
       return null;
   }
