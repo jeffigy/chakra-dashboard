@@ -1,4 +1,5 @@
 import Chat from "pages/Chat";
+import Home from "pages/Home";
 import PageNotFound from "pages/PageNotFound";
 import Schedule from "pages/Schedule";
 import Settings from "pages/Settings";
@@ -9,6 +10,7 @@ function AppRouter() {
     <Router>
       <Routes>
         <Route path="/" element={<Schedule />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/chats" element={<Chat />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<PageNotFound />} />

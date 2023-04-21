@@ -4,6 +4,7 @@ import Navlinks from "./Navlink";
 import { CalendarIcon, ChatIcon, SettingsIcon } from "@chakra-ui/icons";
 
 const NavItems = [
+  { name: "Home", icon: CalendarIcon, to: "/home" },
   { name: "Schedule", icon: CalendarIcon, to: "/" },
   { name: "Chat", icon: ChatIcon, to: "/chats" },
   { name: "Settings", icon: SettingsIcon, to: "/settings" },

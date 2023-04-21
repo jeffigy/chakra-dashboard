@@ -26,10 +26,18 @@ export const theme = extendTheme({
       200: "#5B8291",
       300: "#98DAD9",
       400: "#EAEBED",
-      tealGradient:
-        "linear-gradient(158deg, rgba(12,205,163,1) 0%, rgba(193,252,211,1) 100%)",
       teal1: "#0ccda3",
       teal2: "#c1fcd3",
+      gradient1:
+        "linear-gradient(158deg, rgba(12,205,163,1) 0%, rgba(193,252,211,1) 100%)",
+      gradient2:
+        "linear-gradient(158deg, rgba(150,0,255,1) 0%, rgba(174,186,248,1) 100%)",
+      gradient3:
+        "linear-gradient(158deg, rgba(194,46,208,1) 0%, rgba(95,250,224,1) 100%)",
+      gradient4:
+        "linear-gradient(158deg, rgba(181,31,26,1) 0%, rgba(249,142,246,1) 100%)",
+      gradient5:
+        "linear-gradient(158deg, rgba(169,111,68,1) 0%, rgba(242,236,182,1) 100%)",
     },
   },
   fonts: {

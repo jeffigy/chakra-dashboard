@@ -19,7 +19,7 @@ export default function Navlink({ name, icon, to, ...rest }: NavlinksProps) {
     <NavLink to={to}>
       <Flex
         color={useColorModeValue("black", "white")}
-        bg={isActive ? "brand.tealGradient" : "transparent"}
+        bg={isActive ? "brand.gradient1" : "transparent"}
         align={"center"}
         p={"15px"}
         mx={"30px"}
