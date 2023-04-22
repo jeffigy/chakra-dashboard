@@ -1,13 +1,14 @@
 import { Box, Card, CloseButton, Flex, Spacer, Text } from "@chakra-ui/react";
 import ProfileAvatar from "./ProfileAvatar";
 import Navlinks from "./Navlink";
-import { Home, Calendar, MessageSquare, Settings } from "react-feather";
+import { Home, Calendar, MessageSquare, Settings, LogIn } from "react-feather";
 
 const NavItems = [
   { name: "Home", icon: Home, to: "/" },
   { name: "Schedule", icon: Calendar, to: "/schedule" },
   { name: "Chat", icon: MessageSquare, to: "/chats" },
   { name: "Settings", icon: Settings, to: "/settings" },
+  { name: "Login", icon: LogIn, to: "/login" },
 ];
 type SidebarProps = {
   onClose: () => void;

@@ -1,28 +1,65 @@
-import { FC, FunctionComponent } from "react";
+import { FC, FunctionComponent, useState } from "react";
 import { Field, ErrorMessage } from "formik";
 import TextError from "./TextError";
-import { Input as input } from "@chakra-ui/react";
+import {
+  FormControl,
+  FormHelperText,
+  FormLabel,
+  IconButton,
+  InputGroup,
+  InputRightElement,
+  Input as input,
+} from "@chakra-ui/react";
+import { Eye, EyeOff } from "react-feather";
 type InputProps = {
   label: string;
   name: string;
-  placeholder: string;
+  placeholder?: string;
   type: string;
   [key: string]: any;
+  formHelperText?: string;
 };
-const Input: FC<InputProps> = ({ label, name, placeholder, type, ...rest }) => {
+const Input: FC<InputProps> = ({
+  label,
+  name,
+  placeholder,
+  type,
+  formHelperText,
+  ...rest
+}) => {
+  const [show, setShow] = useState(false);
+  const showPassword = () => setShow(!show);
   return (
-    <div className="form-control">
-      <label htmlFor={name}>{label}</label>
-      <Field
-        as={input}
-        id={name}
-        name={name}
-        placeholder={placeholder}
-        type={type}
-        {...rest}
-      />
+    <FormControl mb={5}>
+      <FormLabel htmlFor={name}>{label}</FormLabel>
+      <InputGroup>
+        <Field
+          as={input}
+          id={name}
+          name={name}
+          placeholder={placeholder}
+          type={show ? "text" : type}
+          {...rest}
+        />
+        {type === "password" && (
+          <InputRightElement>
+            <IconButton
+              _hover={{
+                bg: "none",
+                color: "brand.teal2",
+              }}
+              bg={"none"}
+              color={"brand.teal1"}
+              onClick={showPassword}
+              aria-label={"show/hide button"}
+              icon={show ? <EyeOff /> : <Eye />}
+            />
+          </InputRightElement>
+        )}
+      </InputGroup>
+      <FormHelperText>{formHelperText}</FormHelperText>
       <ErrorMessage name={name} component={TextError as FunctionComponent} />
-    </div>
+    </FormControl>
   );
 };
 
