@@ -57,7 +57,7 @@ const Input: FC<InputProps> = ({
           </InputRightElement>
         )}
       </InputGroup>
-      <FormHelperText>{formHelperText}</FormHelperText>
+      {formHelperText && <FormHelperText>{formHelperText}</FormHelperText>}
       <ErrorMessage name={name} component={TextError as FunctionComponent} />
     </FormControl>
   );

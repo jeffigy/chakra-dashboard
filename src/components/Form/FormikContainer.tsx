@@ -4,14 +4,6 @@ import * as Yup from "yup";
 import FormikControl from "./FormikControl";
 import { Button, Card, CardBody } from "@chakra-ui/react";
 function FormikContainer() {
-  const initialValues = {
-    email: "",
-    description: "",
-    selectOption: "",
-    radioOption: "",
-    checkboxOption: [],
-    date: null,
-  };
   const options = [
     { key: "Select an option", value: "" },
     { key: "Option 1", value: "option1" },
@@ -30,6 +22,15 @@ function FormikContainer() {
     { key: "Option 2", value: "coption2" },
     { key: "Option 3", value: "coption3" },
   ];
+
+  const initialValues = {
+    email: "",
+    description: "",
+    selectOption: "",
+    radioOption: "",
+    checkboxOption: [],
+    date: null,
+  };
 
   const validationSchema = Yup.object({
     email: Yup.string().email("Invalid email format").required("Required"),

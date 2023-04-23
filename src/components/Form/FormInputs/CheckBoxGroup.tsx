@@ -1,15 +1,15 @@
 import React, { FunctionComponent } from "react";
+import { Field, ErrorMessage } from "formik";
+import TextError from "./TextError";
 import {
+  Checkbox,
+  CheckboxGroup,
   FormControl,
   FormHelperText,
   FormLabel,
-  Radio,
-  RadioGroup,
   Stack,
 } from "@chakra-ui/react";
-import { Field, ErrorMessage } from "formik";
-import TextError from "./TextError";
-type RadioButtonProps = {
+type CheckBoxGroupProps = {
   [key: string]: any;
   label: string;
   name: string;
@@ -17,7 +17,7 @@ type RadioButtonProps = {
   formHelperText?: string;
 };
 
-const RadioButton: React.FC<RadioButtonProps> = ({
+const CheckBoxGroup: React.FC<CheckBoxGroupProps> = ({
   label,
   name,
   options,
@@ -29,23 +29,25 @@ const RadioButton: React.FC<RadioButtonProps> = ({
       <FormLabel htmlFor={name}>{label}</FormLabel>
       <Field name={name} {...rest}>
         {({ field, form: { setFieldValue } }: any) => (
-          <RadioGroup
-            onChange={(value) => setFieldValue(name, value)}
+          <CheckboxGroup
+            onChange={(values) => setFieldValue(name, values)}
             value={field.value}
           >
             <Stack spacing={3}>
               {options.map((option) => (
-                <Radio
+                <Checkbox
                   key={option.key}
                   id={option.value}
                   value={option.value}
-                  isChecked={field.value === option.value}
+                  isChecked={
+                    field.value ? field.value.includes(option.value) : false
+                  }
                 >
                   {option.key}
-                </Radio>
+                </Checkbox>
               ))}
             </Stack>
-          </RadioGroup>
+          </CheckboxGroup>
         )}
       </Field>
       {formHelperText && <FormHelperText>{formHelperText}</FormHelperText>}
@@ -53,4 +55,4 @@ const RadioButton: React.FC<RadioButtonProps> = ({
     </FormControl>
   );
 };
-export default RadioButton;
+export default CheckBoxGroup;

@@ -1,6 +1,6 @@
 import { ErrorMessage, Field } from "formik";
 import React, { FunctionComponent } from "react";
-import { Input } from "@chakra-ui/react";
+import { FormHelperText, Input } from "@chakra-ui/react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import TextError from "./TextError";
@@ -9,11 +9,13 @@ type DatePickerProps = {
   label: string;
   name: string;
   [key: string]: any;
+  formHelperText?: string;
 };
 
 const DatePickerComponent: React.FC<DatePickerProps> = ({
   label,
   name,
+  formHelperText,
   ...rest
 }) => {
   return (
@@ -35,6 +37,7 @@ const DatePickerComponent: React.FC<DatePickerProps> = ({
           );
         }}
       </Field>
+      {formHelperText && <FormHelperText>{formHelperText}</FormHelperText>}
       <ErrorMessage name={name} component={TextError as FunctionComponent} />
     </div>
   );

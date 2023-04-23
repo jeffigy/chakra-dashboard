@@ -2,6 +2,7 @@ import Chat from "pages/Chat";
 import Home from "pages/Home";
 import Login from "pages/Login";
 import PageNotFound from "pages/PageNotFound";
+import Register from "pages/Register";
 import Schedule from "pages/Schedule";
 import Settings from "pages/Settings";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
@@ -15,6 +16,7 @@ function AppRouter() {
         <Route path="/chats" element={<Chat />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>

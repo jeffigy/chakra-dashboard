@@ -3,7 +3,7 @@ import Input from "./FormInputs/Input";
 import TextArea from "./FormInputs/TextArea";
 import Select from "./FormInputs/Select";
 import RadioButton from "./FormInputs/RadioButton";
-import Checkbox from "./FormInputs/Checkbox";
+import CheckBoxGroup from "./FormInputs/CheckBoxGroup";
 import DatePicker from "./FormInputs/DatePicker";
 interface FormikControlProps {
   control: string;
@@ -14,7 +14,14 @@ const FormikControl: FC<FormikControlProps> = ({ control, ...rest }) => {
   switch (control) {
     case "input":
       return (
-        <Input label={""} name={""} placeholder={""} type={""} {...rest} />
+        <Input
+          label={""}
+          name={""}
+          placeholder={""}
+          type={""}
+          formHelperText={""}
+          {...rest}
+        />
       );
     case "textarea":
       return <TextArea label={""} name={""} placeholder={""} {...rest} />;
@@ -23,9 +30,25 @@ const FormikControl: FC<FormikControlProps> = ({ control, ...rest }) => {
         <Select label={""} name={""} placeholder={""} options={[]} {...rest} />
       );
     case "radio":
-      return <RadioButton label={""} name={""} options={[]} {...rest} />;
+      return (
+        <RadioButton
+          placeholder={""}
+          label={""}
+          name={""}
+          options={[]}
+          {...rest}
+        />
+      );
     case "checkbox":
-      return <Checkbox label={""} name={""} options={[]} {...rest} />;
+      return (
+        <CheckBoxGroup
+          placeholder={""}
+          label={""}
+          name={""}
+          options={[]}
+          {...rest}
+        />
+      );
     case "date":
       return <DatePicker label={""} name={""} {...rest} />;
     default:

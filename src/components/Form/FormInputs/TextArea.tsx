@@ -1,5 +1,10 @@
 import React, { FunctionComponent } from "react";
-import { Textarea } from "@chakra-ui/react";
+import {
+  FormControl,
+  FormHelperText,
+  FormLabel,
+  Textarea,
+} from "@chakra-ui/react";
 import { Field, ErrorMessage } from "formik";
 import TextError from "./TextError";
 type TextAreaProps = {
@@ -7,15 +12,22 @@ type TextAreaProps = {
   name: string;
   placeholder: string;
   [key: string]: any;
+  formHelperText?: string;
 };
 
-const TextArea: React.FC<TextAreaProps> = ({ label, name, ...rest }) => {
+const TextArea: React.FC<TextAreaProps> = ({
+  label,
+  name,
+  formHelperText,
+  ...rest
+}) => {
   return (
-    <div className="">
-      <label htmlFor={name}>{label}</label>
+    <FormControl mb={5}>
+      <FormLabel htmlFor={name}>{label}</FormLabel>
       <Field as={Textarea} id={name} name={name} {...rest} />
+      {formHelperText && <FormHelperText>{formHelperText}</FormHelperText>}
       <ErrorMessage name={name} component={TextError as FunctionComponent} />
-    </div>
+    </FormControl>
   );
 };
 export default TextArea;
